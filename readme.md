@@ -5,6 +5,10 @@ A basic C++ directory / file brute forcer. It uses a minimal (and probably poor)
 # Queue Modes
 It offers 2 different queue modes. The default splits the wordlist up between each thread, and each thread has its own queue it works through. The global queue `-g` mode uses a central queue for all threads. The global queue has a lock between popping for thread safety which would be slower than the queue-per-thread. However, this allows all threads to work against the same queue. With a queue per thread a thread could clear its own queue and stop working / contributing.
 
+# Demo
+![custer](https://user-images.githubusercontent.com/76693978/159591553-efe774fb-e2f6-46c6-b8ab-a7ebc56da1a5.gif)
+
+
 # Using
 ```
 ./custer -h
